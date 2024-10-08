@@ -20,6 +20,7 @@ body {
   height: 110vh;
   text-align: center;
 }
+
 nav {
   display: flex;
   flex-direction: row;
