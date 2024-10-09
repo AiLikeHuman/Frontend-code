@@ -59,18 +59,41 @@ section {
   border-radius: 20px;
   height: 56px;
 }
-section div p {
+.banner-container {/*배너 컨테이너는 모양 담당 배너 트랙은 움직임 담당*/
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+.banner-track {
   display: flex;
-  align-items: center;
-  height: 1px;
+  transition: transform 0.5s ease;
 }
-.wish_main {
-  color: lightgrey;
-  font-size: 10px;
+.banner-item {
+  min-width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
-section div img {
-  width: 32px;
-  height: 32px;
+/* 광고 순서 표시 */
+.ad-indicator {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+/* 프로그레스 바 */
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background-color: lightgreen;
+  transition: width 3s linear; /* 3초 동안 프로그레스 바가 채워짐 */
 }
 .img_div {
   display: flex;
@@ -128,4 +151,7 @@ main div {
 .friend_selection div {
   display: flex;
   flex-direction: column;
+}
+.main_img{
+  border-radius: 10px;
 }
