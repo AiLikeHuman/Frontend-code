@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .banner-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            background-color: #f1f1f1;
+        }
+        .banner-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .banner-item {
+            min-width: 100%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-container">
+        <div class="banner-track" id="bannerTrack">
+            <div class="banner-item" style="background-color: lightcoral;">
+                Banner 1</div>
+            <div class="banner-item" style="background-color: lightseagreen;">Banner 2</div>
+            <div class="banner-item" style="background-color: lightblue;">Banner 3</div>
+            <div class="banner-item" style="background-color: lightcoral;">Banner 1</div> <!-- 첫 번째 배너 복사 -->
+        </div>
+    </div>
+
+    <script>
+        let index = 0;
+        const track = document.getElementById('bannerTrack');
+        const banners = document.querySelectorAll('.banner-item');
+        const totalBanners = banners.length;
+
+        function showNextBanner() {
+            index++;
+            track.style.transform = `translateX(-${index * 100}%)`;
+
+            // 마지막 배너에 도달하면 즉시 첫 번째 배너로 넘어가게 함
+            if (index === totalBanners - 1) {
+                setTimeout(() => {
+                    track.style.transition = 'none'; // 전환 애니메이션 없이 바로 이동
+                    index = 0; // 첫 번째 배너로 인덱스 리셋
+                    track.style.transform = `translateX(0%)`;
+                    setTimeout(() => {
+                        track.style.transition = 'transform 0.5s ease'; // 전환 애니메이션 복구
+                    }, 50); // 잠시 후 전환 애니메이션을 다시 활성화
+                }, 500); // 애니메이션이 끝난 후에 설정
+            }
+        }
+
+        setInterval(showNextBanner, 3000); // 3초마다 배너가 변경됨
+    </script>
+</body>
+</html>

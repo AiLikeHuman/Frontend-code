@@ -17,13 +17,26 @@
         </div>
       </nav>
       <section>
-        <div class="img_div">
-          <img src="asset/Rectangle 3.png" alt="" />
-        </div>
-        <div>
-          <p class="wish_main">위시버킷</p>
-          <p>위시버킷에서 내 위시템을 담아보세요</p>
-        </div>
+        <div class="banner-container"><!--배너 컨테이너는 모양 담당 -->
+          <div class="banner-track" id="bannerTrack"><!--배너 트랙은 움직임 담당(역할을 나눔으로서 유지보수에 용이함) -->
+              <div class="banner-item" style="background-color: lightcoral;">
+                이곳에 1번 광고
+              </div>
+              <div class="banner-item" style="background-color: lightseagreen;">
+                이곳에 2번 광고
+              </div>
+              <div class="banner-item" style="background-color: lightblue;">
+                이곳에 3번 광고
+              </div>
+              <div class="banner-item" style="background-color: lightcoral;">
+                이곳에 1번 광고
+              </div> 
+          </div>
+          <!-- 현재 광고 순서 표시 -->
+          <div class="ad-indicator" id="adIndicator">1/5</div>
+                        <!-- 프로그레스 바 -->
+          <div class="progress-bar" id="progressBar"></div>
+      </div>
       </section>
       <main>
         <div>
@@ -32,13 +45,13 @@
         <div class="friend_selection">
           <div>
             <a href="한국친구.html">
-                <img src="asset/korean_girl.jfif" alt="한국 친구 사진" />
+                <img class = "main_img" src="asset/korean_girl.jfif" alt="한국 친구 사진" />
             </a>
             <p>한국 친구</p>
         </div>        
           <div>
             <a href="일본친구.html">
-              <img src="asset/japan_girl.jfif" alt="" />
+              <img class = "main_img" src="asset/japan_girl.jfif" alt="" />
           </a>
           <p>일본 친구</p>
           </div>
@@ -46,19 +59,19 @@
         <div class="friend_selection">
           <div>
             <a href="미국친구.html">
-              <img src="asset/korean_girl.jfif" alt="" />
+              <img class = "main_img" src="asset/korean_girl.jfif" alt="" />
           </a>
           <p>미국 친구</p>
           </div>
-
           <div>
             <a href="두바이친구.html">
-              <img src="asset/japan_girl.jfif" alt="한국 친구 사진" />
+              <img class = "main_img" src="asset/japan_girl.jfif" alt="한국 친구 사진" />
           </a>
           <p>두바이 친구</p>
           </div>
         </div>
       </main>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
