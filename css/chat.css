@@ -36,7 +36,7 @@
 }
 
 .chat-box {
-  width: 99%;
+  width: 90%;
   height: 560px;
   background-color: black;
   border: 1px solid black;
@@ -48,14 +48,17 @@
 }
 
 .chat-message {
+  display: flex;
   background-color: #1a73e8;
   color: white;
   padding: 10px;
   border-radius: 10px;
   margin: 10px 0;
-  max-width: 70%; /* 메시지의 최대 너비 */
+  /* 메시지의 최대 너비 */
   word-wrap: break-word;
-  text-align: left; /* 텍스트는 왼쪽 정렬 */
+  text-align: right;
+  float: right;
+  margin-right: 10px; /* Add margin for spacing */
 }
 
 .chatting {
